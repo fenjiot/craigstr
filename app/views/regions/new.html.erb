@@ -1,0 +1,10 @@
+<h2>Add a new region</h2>
+
+<%= form_for @region do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <%= form.submit %>
+<% end %>
