@@ -1,0 +1,9 @@
+<%= form_for @new_category do |form| %>
+  <div>
+    <%= form.text_field :text, placeholder: 'category name' %>
+  </div>
+
+  <%= form.submit %>
+<% end %>
+
+<%= render @categories %>
