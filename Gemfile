@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'pry'
 gem 'rails_12factor', group: :production
 
 gem 'monban-generators'
