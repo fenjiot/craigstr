@@ -4,6 +4,6 @@
 <h3>Existing regions</h3>
 <ul>
   <% @regions.each do |region| %>
-    <li><%= region.name %></li>
+    <li><%= link_to region.name, region_path(region.id) %></li>
   <% end %>
 </ul>
