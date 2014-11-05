@@ -1,0 +1,11 @@
+<li>
+  <div class="post-in-list">
+    Title: <%= link_to post.title, region_post_path(post.region, post) %>
+    <br />
+    Description: <%= post.body %>
+    <br />
+    Posted by <%= post.user.email %>
+
+    <%= button_to "Delete", [post.region, post], method: :delete %>
+  </div>
+</li>

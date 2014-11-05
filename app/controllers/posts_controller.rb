@@ -25,6 +25,14 @@ class PostsController < ApplicationController
     @post = @region.posts.find(params[:id])
   end
 
+  def destroy
+    region = load_region_from_url
+    post = region.posts.find(params[:id])
+    post.destroy
+
+    redirect_to region_posts_path(region)
+  end
+
   private
 
   def post_params
