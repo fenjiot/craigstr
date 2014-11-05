@@ -1,12 +1,14 @@
 class PostsController < ApplicationController
-  before_action :require_login, expect: [:index]
+  before_action :require_login, except: [:index]
 
   def index
-    @posts = region.posts.all
+    @region = load_region_from_url
+    @posts = @region.posts.all
   end
 
   def new
-    @post = region.posts.new
+    @region = load_region_from_url
+    @post = @region.posts.new
   end
 
   def create
@@ -19,7 +21,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = load_post_from_url
+    @region = load_region_from_url
+    @post = @region.posts.find(params[:id])
   end
 
   private
@@ -31,7 +34,7 @@ class PostsController < ApplicationController
       merge(region_id: params[:region_id])
   end
 
-  def load_post_from_url
-    region.posts.find(params[:id])
+  def load_region_from_url
+    Region.find(params[:region_id])
   end
 end

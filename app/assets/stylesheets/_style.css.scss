@@ -1,0 +1,43 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #292929;
+  color: #BFBFBF;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.session {
+    float: right;
+}
+
+ul, li {
+  list-style-type: none; 
+  text-decoration: none;
+}
+
+img {
+  width: 500px;
+}
+
+h1 a[href] {
+  border-bottom: 1px solid #CBEEFA;
+  box-shadow: inset 0 -2px 0 #CBEEFA; 
+}
+
+a:link, a:visited, a:hover, a:active { text-decoration: none; color: #87AF5F; }
+
+.turq {
+  color: #82C5E7;
+}
+
+.field_with_errors {
+  color: #D75F5F;
+}
+
+.image_preview {
+  max-width: 150px;
+}
+
+.post-in-list {
+  padding-bottom: 5px;
+}
