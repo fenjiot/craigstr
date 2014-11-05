@@ -12,8 +12,7 @@ Interactive social place.
 4. Expect to land on home page.
 5. Show logged in with email next to sign out button.
 
-## As a user, I can see the existing regions, click on the region, and see the
-## posts associated with that region.
+## See post for regions.
 
 1. When I visit the home page, I can see list of existing regions.
 2. I can click on a specific region.
@@ -26,16 +25,14 @@ Interactive social place.
 2. This takes me to the post's individual page.
 3. Shows the post's title and description.
 
-## As an admin, I can create a region on the homepage. I see the region as an
-## existing region.
+## As an admin, I can create a region on the homepage.
 
 1. I can create regions from regions/new.
 2. Fill out region's name.
 3. Click submit.
 4. Once I submit, it takes me to a list of all the regions.
 
-## As a user, I can create a post to a region. I see the post in the region's post
-## list.
+## As a user, I can create a post to a region.
 
 1. Within a region's page, I can fill out a post's title and body.
 2. Click create post button.
