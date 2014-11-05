@@ -23,6 +23,10 @@ class RegionsController < ApplicationController
     end
   end
 
+  def destroy
+
+  end
+
   private
 
   def region_params

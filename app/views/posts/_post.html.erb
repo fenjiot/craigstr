@@ -1,0 +1,10 @@
+    <li>
+      <div class="post-in-list">
+        Title: <%= link_to post.title, region_post_path(@region, post) %>
+        <br />
+        Description: <%= post.body %>
+        <br />
+        Posted by <%= post.user.email %>
+    <%= render "posts/delete", region: @region, post: post %>
+      </div>
+    </li>
