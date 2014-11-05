@@ -5,6 +5,12 @@ class RegionsController < ApplicationController
     @regions = Region.all
   end
 
+  def show
+    @region = load_region_from_url
+    @post = @region.posts.new
+    @posts = @region.posts.all
+  end
+
   def new
     @region = Region.new
   end
@@ -21,5 +27,9 @@ class RegionsController < ApplicationController
 
   def region_params
     params.require(:region).permit(:name)
+  end
+
+  def load_region_from_url
+    Region.find(params[:id])
   end
 end
