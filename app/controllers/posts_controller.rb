@@ -26,11 +26,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @region = load_region_from_url
-    post = @region.posts.find(params[:id])
+    region = load_region_from_url
+    post = region.posts.find(params[:id])
     post.destroy
 
-    redirect_to region_posts_path(@region)
+    redirect_to region_posts_path(region)
   end
 
   private
