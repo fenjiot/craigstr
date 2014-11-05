@@ -1,18 +1,6 @@
 <h2><%= @region.name %></h2>
 
-<%= form_for [@region, @post]  do |form| %>
-  <div>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <%= form.submit %>
-<% end %>
+<%= render "posts/form", region: @region, post: @post %>
 
 <h3>Posts</h3>
 <ul>
