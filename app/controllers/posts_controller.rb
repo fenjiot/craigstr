@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :require_login, expect: [:index]
+  before_action :require_login, except: [:index]
 
   def index
     @region = load_region_from_url
