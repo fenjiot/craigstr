@@ -1,7 +1,5 @@
 <h2><%= @category.text %></h2>
 
 <ul>
-  <% @posts.each do |post| %>
-    <%= render post %>
-  <% end %>
+  <%= render @post %>
 </ul>
