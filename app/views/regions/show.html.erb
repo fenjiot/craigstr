@@ -5,11 +5,7 @@
 
 <h4>Categories</h4>
 <ul>
-  <% @region.categories.each do |category| %>
-    <li>
-      <%= render category, region: @region %>
-    </li>
-  <% end %>
+  <%= render @categories %>
 </ul>
 
 
