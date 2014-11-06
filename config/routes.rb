@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
 
   resources :regions, only: [:index, :new, :show, :create, :update, :destroy] do
-    resources :posts, only: [:index, :new, :create, :show, :destroy]
+    resources :posts
     resources :categories, only: [:index, :new, :create, :show]
   end
 

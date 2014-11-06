@@ -25,6 +25,21 @@ class PostsController < ApplicationController
     @post = @region.posts.find(params[:id])
   end
 
+  def edit
+    @post = current_user.posts.find(params[:id])
+  end
+
+  def update
+    region = load_region_from_url
+    @post = current_user.posts.find(params[:id])
+
+    if @post.update(post_params)
+      redirect_to [region, @post]
+    else
+      render :edit
+    end
+  end
+
   def destroy
     region = load_region_from_url
     post = region.posts.find(params[:id])

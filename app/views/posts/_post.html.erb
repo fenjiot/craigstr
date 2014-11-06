@@ -7,5 +7,6 @@
     Posted by <%= post.user.email %>
 
     <%= button_to "Delete", [post.region, post], method: :delete %>
+    <%= link_to "Edit", edit_region_post_path(post.region, post) %>
   </div>
 </li>
