@@ -1,1 +1,7 @@
-<h2><%= @new_category.text %></h2>
+<h2><%= @category.text %></h2>
+
+<ul>
+  <% @posts.each do |post| %>
+    <%= render post, region: post.region, post: post %>
+  <% end %>
+</ul>

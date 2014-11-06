@@ -1,9 +1,9 @@
-<%= form_for @new_category do |form| %>
+<%= form_for [@region, @category], url: region_categories_path(@region) do |form| %>
   <div>
-    <%= form.text_field :text, placeholder: 'category name' %>
+    <%= form.text_field :text, placeholder: "category name" %>
   </div>
 
   <%= form.submit %>
 <% end %>
 
-<%= render @categories %>
+<%= render @categories, region: @region, category: @category %>
