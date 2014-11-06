@@ -5,5 +5,6 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :region
 
-  has_many :categories
+  has_many :post_categories
+  has_many :categories, through: :post_categories
 end

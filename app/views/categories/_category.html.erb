@@ -1,1 +1,3 @@
-<p> <%= category.text %> </p>
+<li>
+  <%= link_to category.text, region_category_path(region, category) %>
+</li>
