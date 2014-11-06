@@ -9,6 +9,7 @@ class RegionsController < ApplicationController
     @region = load_region_from_url
     @post = @region.posts.new
     @posts = @region.posts.all
+    @categories = @region.categories
   end
 
   def new
