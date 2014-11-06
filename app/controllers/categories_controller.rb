@@ -8,13 +8,12 @@ class CategoriesController <ApplicationController
   end
 
   def create
-    region = load_region_from_url
-    category = region.categories.new(category_params)
+    @region = load_region_from_url
+    category = @region.categories.new(category_params)
 
     if category.save
       redirect_to region_categories_path
     else
-      @region = load_region_from_url
       @category = @region.categories.new
       @categories = @region.categories.all
       render :index

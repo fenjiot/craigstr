@@ -38,3 +38,9 @@ Interactive social place.
 2. Click create post button.
 3. Once I click create post, it takes me to a new page that shows my new post
 and existing posts.
+
+## As a user, I can browse all categories in a region.
+
+1. From a region's page, I can see all the existing categories.
+2. When I click on a category, I can view all the posts with that category in
+   that region.

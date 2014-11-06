@@ -3,7 +3,7 @@
 <h3>Make a post</h3>
 <%= render "posts/form", post: @post %>
 
-<h4><%= link_to "Categories", region_categories_path(@region) %></h4>
+<h4>Categories</h4>
 <ul>
   <% @region.categories.each do |category| %>
     <li>
