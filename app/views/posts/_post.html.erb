@@ -6,6 +6,6 @@
     <br />
     Posted by <%= post.user.email %>
 
-    <%= render "posts/delete", region: post.region, post: post %>
+    <%= button_to "Delete", [post.region,post], method: :delete %>
   </div>
 </li>

@@ -1,3 +1,1 @@
-<%= form_for [region, post], method: :delete do |form| %>
-  <%= form.submit "Delete" %>
-<% end %>
+<%= button_to "Delete", [post.region,post], method: :delete %>

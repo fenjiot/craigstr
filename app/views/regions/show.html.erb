@@ -1,10 +1,8 @@
 <h2><%= @region.name %></h2>
 
-<%= render "posts/form", region: @post.region, post: @post %>
+<%= render "posts/form", post: @post %>
 
 <h3>Posts</h3>
 <ul>
-  <% @posts.each do |post| %>
-    <%= render "posts/post", region: post.region, post: post %>
-  <% end %>
+  <%= render @posts %>
 </ul>
