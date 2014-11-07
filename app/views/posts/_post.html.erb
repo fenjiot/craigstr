@@ -5,7 +5,8 @@
     Description: <%= post.body %>
     <br />
     Posted by <%= post.user.email %>
-
+    <br />
+    <%= image_tag post.image_url %>
     <%= button_to "Delete", [post.region, post], method: :delete %>
     <%= link_to "Edit", edit_region_post_path(post.region, post) %>
     <%= button_to "Report as spam", region_post_spams_path(post.region, post) %>
