@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20141107143943) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "region_id"
-    t.string   "image_url"
     t.integer  "spam",       default: 0
+    t.string   "image_url"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree

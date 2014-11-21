@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   namespace :admin, constraints: AdminConstraint.new do
     resources :regions, :posts, :categories
 
-    root "admin#index"
+    root to: "admin/regions#index"
   end
 
   root "regions#index"
